@@ -58,7 +58,7 @@ export class CredentialComponent implements OnInit, OnChanges {
       const nameTop = 157;
       const nameLeft = this.canvasWidth / 2;
 
-      templateImage.src = 'assets/images/cred-ver.png';
+      templateImage.src = 'assets/images/cred.png';
       templateImage.onload = () => {
         let qrImage = this.qrCode.el.nativeElement.querySelector('img');
 
