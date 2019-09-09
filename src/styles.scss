@@ -1,0 +1,26 @@
+@import './styles.colors';
+@import '~materialize-css/sass/materialize';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+@font-face {
+  font-family: 'Antonio';
+  src: url('assets/fonts/Antonio-Regular.ttf');
+}
+
+body {
+  font-family: 'Antonio', sans-serif;
+}
+
+tg-root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a {
+  cursor: pointer;
+}

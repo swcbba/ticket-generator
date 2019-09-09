@@ -1,0 +1,24 @@
+@import '../../styles.mat.scss';
+
+table {
+  margin-bottom: 100px;
+}
+
+.btn-floating {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+
+  @media #{$medium-and-up} {
+    bottom: 100px;
+    right: 50px;
+  }
+}
+
+.modal-trigger {
+  margin-left: 10px;
+}
+
+.modal-close {
+  margin-left: 6px !important;
+}
