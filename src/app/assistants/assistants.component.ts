@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { Subscription } from 'rxjs';
@@ -7,7 +7,6 @@ import { AssistantService } from '../shared/services/assistant/assistant.service
 import { Assistant } from '../shared/models/assistant.model';
 import { CredentialComponent } from '../shared/components/credential/credential.component';
 import { MaterializeService } from '../shared/services/materialize/materialize.service';
-import { SelectDirective } from '../shared/directives/select/select.directive';
 
 @Component({
   selector: 'tg-assistants',
@@ -19,7 +18,7 @@ export class AssistantsComponent implements OnInit, OnDestroy {
     id: '',
     fullName: '',
     email: '',
-    phone: '',
+    phoneNumber: '',
     deleteFlag: false
   };
   searchTerm = '';

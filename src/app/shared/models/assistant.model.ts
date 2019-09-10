@@ -5,7 +5,7 @@ export interface Assistant {
   fullName?: string;
   email: string;
   deleteFlag: boolean;
-  phone?: string;
+  phoneNumber?: string;
   addDate?: Date;
   updateDate?: Date;
   checkIn?: boolean;
