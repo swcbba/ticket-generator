@@ -8,7 +8,7 @@ import { AssistantService } from '../shared/services/assistant/assistant.service
 import { CredentialComponent } from '../shared/components/credential/credential.component';
 
 const firstLineTop = 0;
-const secondLineTop = 290;
+const secondLineTop = 300;
 const firstItemLeft = 0;
 const secondItemLeft = 200;
 const JPEG = 'JPEG';
