@@ -26,48 +26,6 @@
                 <span>CheckIn</span>
               </label>
             </p>
-            <p>
-              <label>
-                <input type="checkbox" [checked]="assistant.fridayDinner" [disabled]="!assistant.checkIn"
-                  (change)="checkAssistant(assistant, 'fridayDinner')">
-                <span>Friday Dinner</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" [checked]="assistant.saturdayBreakfast" [disabled]="!assistant.checkIn"
-                  (change)="checkAssistant(assistant, 'saturdayBreakfast')">
-                <span>Saturday Breakfast</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" [checked]="assistant.saturdayLunch" [disabled]="!assistant.checkIn"
-                  (change)="checkAssistant(assistant, 'saturdayLunch')">
-                <span>Saturday Lunch</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" [checked]="assistant.saturdayDinner" [disabled]="!assistant.checkIn"
-                  (change)="checkAssistant(assistant, 'saturdayDinner')">
-                <span>Saturday Dinner</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" [checked]="assistant.sundayBreakfast" [disabled]="!assistant.checkIn"
-                  (change)="checkAssistant(assistant, 'sundayBreakfast')">
-                <span>Sunday Breakfast</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" [checked]="assistant.sundayLunch" [disabled]="!assistant.checkIn"
-                  (change)="checkAssistant(assistant, 'sundayLunch')">
-                <span>Sunday Lunch</span>
-              </label>
-            </p>
           </td>
         </ng-container>
       </tr>

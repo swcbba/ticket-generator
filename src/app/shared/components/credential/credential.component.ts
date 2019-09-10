@@ -67,8 +67,11 @@ export class CredentialComponent implements OnInit, OnChanges {
         }
 
         context.drawImage(templateImage, 0, 0);
-        context.font = '25px Antonio';
+        context.font = '25px Montserrat';
         context.textAlign = 'center';
+        context.fillStyle = '#c32137';
+        context.fillText('Women\'s Talk Night', nameLeft, nameTop - 40);
+        context.fillStyle = 'black';
         context.fillText(this.assistant.fullName, nameLeft, nameTop);
         context.drawImage(qrImage, qrLeft, qrTop);
       };

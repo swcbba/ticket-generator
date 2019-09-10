@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "tickets-swcbba"
+    "default": "tickets-swcbba",
+    "women-talk-night": "women-night-talk"
   }
 }
