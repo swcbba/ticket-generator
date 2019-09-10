@@ -1,17 +1,21 @@
-import { Package } from './package.enum';
-
 export interface Assistant {
   id: string;
+  firstName?: string;
+  lastName?: string;
   fullName?: string;
   email: string;
-  package: Package;
   deleteFlag: boolean;
   phone?: string;
-  insertDate?: Date;
+  addDate?: Date;
   updateDate?: Date;
   checkIn?: boolean;
-  snackOne?: boolean;
-  snackTwo?: boolean;
-  lunch?: boolean;
+  secondCheckIn?: boolean;
+  thirdCheckIn?: boolean;
+  fridayDinner?: boolean;
+  saturdayBreakfast?: boolean;
+  saturdayLunch?: boolean;
+  saturdayDinner?: boolean;
+  sundayBreakfast?: boolean;
+  sundayLunch?: boolean;
   visibleInSearch?: boolean;
 }
