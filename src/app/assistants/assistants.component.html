@@ -11,7 +11,6 @@
       <th>#</th>
       <th>Full Name</th>
       <th class="hide-on-small-only">Email</th>
-      <th>Package</th>
       <th></th>
     </tr>
   </thead>
@@ -21,7 +20,6 @@
         <td>{{ i + 1 }}</td>
         <td>{{ assistant.fullName }}</td>
         <td class="hide-on-small-only">{{ assistant.email }}</td>
-        <td>{{ assistant.package | packageParser }}</td>
         <td>
           <a class="modal-trigger" href="#print-credential" (click)="selectedAssistant = assistant">
             <i class="fas fa-qrcode fa-lg"></i>
@@ -63,15 +61,6 @@
     <h4>Assistant</h4>
     <form [formGroup]="assistantsForm">
       <div class="row">
-        <div class="input-field col s12">
-          <select #packageSelect=selectDirective tgSelect formControlName="package" class="validate" required>
-            <option value="" disabled>Choose an option</option>
-            <option value="bronze">Bronze</option>
-            <option value="gold">Gold</option>
-            <option value="platinum">Platinum</option>
-          </select>
-          <label>Package *</label>
-        </div>
         <div class="input-field col s12">
           <input id="assistantemail" name="assistantemail" type="email" formControlName="email" class="validate"
             required>

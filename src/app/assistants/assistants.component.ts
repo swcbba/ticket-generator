@@ -6,7 +6,6 @@ import { Subscription } from 'rxjs';
 import { AssistantService } from '../shared/services/assistant/assistant.service';
 import { Assistant } from '../shared/models/assistant.model';
 import { CredentialComponent } from '../shared/components/credential/credential.component';
-import { Package } from '../shared/models/package.enum';
 import { MaterializeService } from '../shared/services/materialize/materialize.service';
 import { SelectDirective } from '../shared/directives/select/select.directive';
 
@@ -21,7 +20,6 @@ export class AssistantsComponent implements OnInit, OnDestroy {
     fullName: '',
     email: '',
     phone: '',
-    package: Package.invalid,
     deleteFlag: false
   };
   searchTerm = '';
@@ -30,8 +28,6 @@ export class AssistantsComponent implements OnInit, OnDestroy {
   selectedAssistant: Assistant;
   assistantsForm: FormGroup;
   currentCredential: CredentialComponent;
-  @ViewChild('packageSelect', { static: true })
-  private packageSelect: SelectDirective;
 
   constructor(
     public assistantService: AssistantService,
@@ -78,7 +74,6 @@ export class AssistantsComponent implements OnInit, OnDestroy {
   patchAssistantsForm(assistant: Assistant): void {
     this.assistantsForm.patchValue({ ...assistant });
     this.materialService.updateTextFields();
-    this.packageSelect.initFormSelect();
   }
 
   printCredential(): void {
