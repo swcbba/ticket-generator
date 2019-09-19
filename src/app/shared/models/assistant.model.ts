@@ -18,4 +18,5 @@ export interface Assistant {
   sundayBreakfast?: boolean;
   sundayLunch?: boolean;
   visibleInSearch?: boolean;
+  qrSent?: boolean;
 }
