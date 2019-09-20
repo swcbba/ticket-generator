@@ -77,11 +77,15 @@ export class AssistantService {
   ): boolean {
     if (itemForScan === 'checkIn') {
       return true;
+    } else {
+      const valid = !!assistant.checkIn;
+
+      if (!assistant.checkIn) {
+        messageEmitter.emit('Looks like the assistant did not make check in');
+      }
+
+      return valid;
     }
-
-    messageEmitter.emit('Looks like the assistant did not make check in');
-
-    return false;
   }
 
   private initializeCheckValues(assistant: Assistant): void {
