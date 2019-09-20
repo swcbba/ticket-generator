@@ -5,6 +5,11 @@
       <input type="text" name="search" class="form-control" placeholder="Search assistants" [(ngModel)]="searchTerm"
         (ngModelChange)="searchAssistant()">
     </div>
+    <div class="col s12 m8 right-align">
+      <h5><b>Total:</b> {{ assistants.length }}</h5>
+      <h5><b>Check In:</b> {{ checkedAssistantsCount }}</h5>
+      <h5><b>Missing:</b> {{ assistants.length - checkedAssistantsCount }}</h5>
+    </div>
   </div>
   <table>
     <thead>
@@ -23,24 +28,24 @@
             <p>
               <label>
                 <input type="checkbox" [checked]="assistant.checkIn" (change)="checkAssistant(assistant, 'checkIn')">
-                <span>CheckIn</span>
+                <span>Viernes</span>
               </label>
             </p>
             <p>
               <label>
                 <input type="checkbox" [checked]="assistant.fridayDinner" [disabled]="!assistant.checkIn"
                   (change)="checkAssistant(assistant, 'fridayDinner')">
-                <span>Friday Dinner</span>
+                <span>Sábado</span>
               </label>
             </p>
             <p>
               <label>
                 <input type="checkbox" [checked]="assistant.saturdayBreakfast" [disabled]="!assistant.checkIn"
                   (change)="checkAssistant(assistant, 'saturdayBreakfast')">
-                <span>Saturday Breakfast</span>
+                <span>Domingo</span>
               </label>
             </p>
-            <p>
+            <!-- <p>
               <label>
                 <input type="checkbox" [checked]="assistant.saturdayLunch" [disabled]="!assistant.checkIn"
                   (change)="checkAssistant(assistant, 'saturdayLunch')">
@@ -67,7 +72,7 @@
                   (change)="checkAssistant(assistant, 'sundayLunch')">
                 <span>Sunday Lunch</span>
               </label>
-            </p>
+            </p> -->
           </td>
         </ng-container>
       </tr>

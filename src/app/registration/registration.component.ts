@@ -16,6 +16,18 @@ export class RegistrationComponent implements OnInit, OnDestroy {
   assistants: Assistant[];
   assistantsSubscription: Subscription;
 
+  get checkedAssistantsCount(): number {
+    let count = 0;
+
+    this.assistants.forEach(assistant => {
+      if (assistant.checkIn) {
+        count++;
+      }
+    });
+
+    return count;
+  }
+
   constructor(public assistantService: AssistantService) {}
 
   ngOnInit(): void {
